@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmBookingActivity">
+
+    <ImageView
+        android:id="@+id/blueBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/background_page" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <!-- Activity Label "Reservation Details" -->
+
+    <!-- Activity label description -->
+
+    <TextView
+        android:id="@+id/textViewReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="Reservation Details"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <TextView
+        android:id="@+id/textViewReservationDet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="Select date and time for you reservation you have \n chosen prior:"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewReservation"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="395dp"
+        android:layout_height="726dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewReservationDet">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="398dp"
+            android:layout_height="608dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="27dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/white_background2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <!-- Label for Select Date -->
+                    <TextView
+                        android:id="@+id/textViewDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="32dp"
+                        android:text="Select Date:"
+                        android:textColor="#040115"
+                        android:textStyle="bold" />
+
+                    <!-- Input for Select Date -->
+                    <EditText
+                        android:id="@+id/inputDate"
+                        android:layout_width="304dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="32dp"
+                        android:background="@drawable/edittext_background"
+                        android:ems="10"
+                        android:hint="DD/MM/YY"
+                        android:inputType="text"
+                        android:padding="7dp"
+                        android:textColorHint="#8E8E8E"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <!-- Label for Select Time (from) -->
+                    <TextView
+                        android:id="@+id/textViewTimeFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="32dp"
+                        android:text="Select Time (From):"
+                        android:textColor="#040115"
+                        android:textStyle="bold" />
+
+                    <!-- Input for Select Time (from) -->
+                    <EditText
+                        android:id="@+id/inputTimeFrom"
+                        android:layout_width="302dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="32dp"
+                        android:background="@drawable/edittext_background"
+                        android:ems="10"
+                        android:hint="HH:MM"
+                        android:inputType="time"
+                        android:padding="7dp"
+                        android:textColorHint="#8E8E8E"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <!-- Label for Select Time (to) -->
+                    <TextView
+                        android:id="@+id/textViewTimeTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="32dp"
+                        android:text="Select Time (To):"
+                        android:textColor="#040115"
+                        android:textStyle="bold" />
+
+                    <!-- Input for Select Time (to) -->
+                    <EditText
+                        android:id="@+id/inputTimeTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:ems="10"
+                        android:hint="HH:MM"
+                        android:inputType="time"
+                        android:padding="7dp"
+                        android:textColorHint="#8E8E8E"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/SplitLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#DADADA" />
+
+                    <!-- Label for Packages Choosen -->
+                    <TextView
+                        android:id="@+id/textViewPackChoosen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="32dp"
+                        android:text="Packages Choosen:"
+                        android:textColor="#040115"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <!-- Output space for Pack Choosen-->
+                    <TextView
+                        android:id="@+id/outputPack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="//display package names + details + price here"
+                        android:textColor="#040115"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/SplitLine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="#DADADA" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <!-- Label for Total Price -->
+                        <TextView
+                            android:id="@+id/textViewPrice"
+                            android:layout_width="144dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginBottom="32dp"
+                            android:text="Total Price:"
+                            android:textColor="#040115"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <!-- Output space for Total Price -->
+                        <TextView
+                            android:id="@+id/outputPrice"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginBottom="32dp"
+                            android:gravity="end"
+                            android:text="RMXX.XX"
+                            android:textColor="#040115"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Button for "Confirm" -->
+            <Button
+                android:id="@+id/confirmBtn"
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/orange_button_background"
+                android:onClick="confirmButton"
+                android:text="Confirm"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FA951A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

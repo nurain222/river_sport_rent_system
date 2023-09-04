@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950567691237",
+    "project_id": "gp-riversport-814d1",
+    "storage_bucket": "gp-riversport-814d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950567691237:android:f877779c6e70590f56c50c",
+        "android_client_info": {
+          "package_name": "com.example.gp_riversport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950567691237-dkjr5bh3ujnd634dg1bl11c9vbjuc771.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWveMtQMqrLtbp3_mv-uwkKYg022amGsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950567691237-dkjr5bh3ujnd634dg1bl11c9vbjuc771.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
